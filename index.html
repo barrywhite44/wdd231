@@ -1,63 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Web Development Fundamentals - Emmanuel Nasir</title>
-    <meta name="description" content="WDD 231 - Web Development Fundamentals by Emmanuel Nasir. Demonstrating skills in HTML, CSS, and JavaScript.">
-    <meta name="author" content="Emmanuel Nasir">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 231 | Barrywhite Christopher</title>
+    <meta name="description" content="Barrywhite Christopher's WDD 231 course home page, featuring coursework and web development projects.">
+    <meta name="author" content="Barrywhite Christopher">
+    <link rel="icon" href="Image/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>WDD 231: Web Frontend Development I - Emmanuel Nasir</h1>
-        <button id="menu-toggle" class="hamburger">&#9776;</button>
-        <nav id="main-nav">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="https://github.com/emmanuel-nasir">GitHub Profile</a></li>
-                <li><a href="http://www.linkedin.com/in/emmanuel-nasir-6237a1308">LinkedIn</a></li>
+    <header class="site-header">
+        <div class="identity wrapper">
+            <img src="Image/profile.jpg" alt="Barrywhite Christopher" width="72" height="72">
+            <p>Barrywhite Christopher</p>
+            <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+        </div>
+        <nav id="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="https://github.com/barrywhite44" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/barrywhite-christopher/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-me">
-                <div class="about-text">
-               <p>My name is Emmanuel. I'm currently pursuing a degree at BYU-I, aiming to enhance my skills and be more self-reliant. </p>
-                </div>
-                <div class="about-image">
-                    <img src="Image/profile.jpg" alt="Emmanuel Nasir">
-                </div>
+    <main class="wrapper">
+        <h1>Home</h1>
+        <div class="intro-grid">
+            <section class="card" aria-labelledby="about-heading"><h2 id="about-heading">About Me</h2><div class="card-content"><p>My name is Barrywhite Christopher. I am pursuing a degree at BYU-Idaho and building the skills to create useful, accessible web experiences. This course is helping me become a more capable and self-reliant developer.</p></div></section>
+            <section class="card location" aria-labelledby="location-heading"><h2 id="location-heading">Student Location</h2><div class="card-content"><img src="Image/Nigeria_flag.jpg" alt="Flag of Nigeria" width="320" height="214"><p>Lagos, Nigeria</p></div></section>
+        </div>
+        <section class="card courses" aria-labelledby="courses-heading">
+            <h2 id="courses-heading">Web and Computer Programming Certificate</h2>
+            <div class="card-content">
+                <div class="filters" aria-label="Course filters"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All Courses</button><button type="button" class="filter" data-filter="wdd" aria-pressed="false">WDD Courses</button><button type="button" class="filter" data-filter="cse" aria-pressed="false">CSE Courses</button></div>
+                <div id="course-list" class="course-list" aria-live="polite"></div>
+                <p class="credits">The total credits for courses shown: <strong id="total-credits">0</strong></p>
             </div>
         </section>
-
-        <section id="location">
-            <h2>Lagos, Nigeria</h2>
-            <p>Nigeria, with its rich cultural heritage, is the largest oil producer in Africa. The country is famous for its vibrant film industry, Nollywood, and its diverse linguistic landscape.</p>
-            <img src="Image/image.png" alt="Flag of Nigeria">
-        </section>
-
-        <section id="courses">
-            <h3>Web and Computer Programming Courses</h3>
-            <ul id="course-list"></ul>
-            <div id="course-buttons">
-                <button id="all-courses">All Courses</button>
-                <button id="wdd-courses">WDD Courses</button>
-                <button id="cse-courses">CSE Courses</button>
-            </div>
-            <p>Total Credits: <span id="totalCredits">0</span></p>
-        </section>
-        
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Emmanuel Nasir, Nigeria.</p>
+        <p>&copy; <span id="currentYear"></span> Barrywhite Christopher , Nigeria.</p>
         <p id="lastModified"></p>
     </footer>
 </body>

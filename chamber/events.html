@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View upcoming events and networking opportunities with the Abeokuta Chamber of Commerce.">
-    <meta name="author" content="Emmanuel Nasir">
+    <meta name="author" content="Barrywhite Christopher ">
     <meta property="og:title" content="Events - Abeokuta Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Image/logo.png">
-    <meta property="og:url" content="events.html">
+    <meta property="og:image" content="Images/logo.png">
+    <meta property="og:url" content="https://neyoungandy.github.io/wdd231/chamber/events.html">
     <title>Events - Abeokuta Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
@@ -29,7 +29,7 @@
         <section id="events-list">
             <article>
                 <h3>Networking Luncheon</h3>
-                <p>Date: November 30, 2024</p>
+                <p>Date: November 30, 2026</p>
                 <p>Location: Civic Center</p>
             </article>
         </section>
@@ -37,7 +37,11 @@
     <footer>
         <p>&copy; <span id="current-year"></span> Abeokuta Chamber of Commerce</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Emmanuel Nasir, WDD231</p>
+        <p>Barrywhite Christopher , WDD231</p>
     </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 </html>
