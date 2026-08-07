@@ -108,6 +108,20 @@ section { margin-top: 2rem; }
     background: #fff;
     box-shadow: 0 4px 14px rgb(23 32 42 / 7%);
 }
+.member-card {
+    display: grid;
+    align-content: start;
+    gap: .65rem;
+}
+.member-card img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    padding: .5rem;
+    border-radius: .35rem;
+    background: #f8fbfa;
+    object-fit: contain;
+}
 .spotlight-card { display: grid; gap: .6rem; }
 .spotlight-card img { width: 100%; height: 115px; object-fit: contain; }
 .spotlight-card h4, .member-card h3 { margin: 0; }
@@ -119,7 +133,8 @@ section { margin-top: 2rem; }
 #member-list.list { display: grid; gap: .75rem; }
 #member-list.list .member-card { display: grid; grid-template-columns: 1fr 2fr; align-items: center; text-align: left; }
 #member-list.list .member-card img { display: none; }
-.membership-level { margin: 0; color: var(--muted); font-weight: 700; }
+.member-card p, .member-card h3 { margin: 0; }
+.membership-level { color: var(--muted); font-weight: 700; }
 .menu-button { display: none; }
 
 form { width: min(100%, 640px); margin-top: 1rem; }
