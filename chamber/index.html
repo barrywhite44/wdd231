@@ -9,19 +9,28 @@
 
     <meta property="og:title" content="Abeokuta Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Images/logo.png">
-    <meta property="og:url" content="https://neyoungandy.github.io/wdd231/chamber/">
+    <meta property="og:description" content="Connect, grow, and succeed with the Abeokuta Chamber of Commerce business community.">
+    <meta property="og:image" content="https://barrywhite44.github.io/wdd231/chamber/Images/logo-small.jpg">
+    <meta property="og:url" content="https://barrywhite44.github.io/wdd231/chamber/">
     <title>Abeokuta Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="Images/favicon.ico">
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to Abeokuta Chamber of Commerce</h1>
-        <nav>
+        <p class="site-name">Abeokuta Chamber of Commerce</p>
+        <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        <nav id="primary-nav" aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -31,10 +40,10 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="hero">
-            <img src="Images/logo.png" alt="Abeokuta Chamber of Commerce" class="hero-image">
+            <img src="Images/logo-small.jpg" alt="Abeokuta Chamber of Commerce" class="hero-image" width="280" height="280">
             <div class="hero-text">
+                <h1>Abeokuta Chamber of Commerce</h1>
                 <h2>Your Gateway to Business Networking</h2>
                 <p>Join our community to connect, grow, and succeed.</p>
                 <a href="join.html" class="cta-button">Join the Chamber</a>
@@ -76,13 +85,6 @@
         <p>Barrywhite Christopher , WDD231</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
 </body>
 
 </html>
