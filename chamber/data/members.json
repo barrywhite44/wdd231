@@ -2,7 +2,7 @@
     {
         "name": "Golden Horizon Ltd.",
         "level": "Gold",
-        "logo": "images/Gold.webp",
+        "logo": "Images/Gold.webp",
         "phone": "+234 801 234 5678",
         "address": "123 Business Road, Abeokuta",
         "website": "https://goldenhorizon.com"
@@ -10,7 +10,7 @@
     {
         "name": "Silver Edge Solutions",
         "level": "Silver",
-        "logo": "images/silver.png",
+        "logo": "Images/silver.png",
         "phone": "+234 802 345 6789",
         "address": "456 Corporate Avenue, Abeokuta",
         "website": "https://silveredge.com"
@@ -18,7 +18,7 @@
     {
         "name": "Platinum Partners",
         "level": "Gold",
-        "logo": "images/plantinum.webp",
+        "logo": "Images/plantinum.webp",
         "phone": "+234 803 456 7890",
         "address": "789 Executive Drive, Abeokuta",
         "website": "https://platinumpartners.com"
@@ -26,7 +26,7 @@
     {
         "name": "Startup Stars",
         "level": "Silver",
-        "logo": "images/silver star.jpg",
+        "logo": "Images/silver star.jpg",
         "phone": "+234 804 567 8901",
         "address": "12 Innovation Park, Abeokuta",
         "website": "https://startupstars.com"
@@ -34,9 +34,25 @@
     {
         "name": "Bronze Business Co.",
         "level": "Bronze",
-        "logo": "images/bronze.jpg",
+        "logo": "Images/bronze.jpg",
         "phone": "+234 805 678 9012",
         "address": "34 Entrepreneur Lane, Abeokuta",
         "website": "https://bronzebusiness.com"
+    },
+    {
+        "name": "Olumo Creative Studio",
+        "level": "Silver",
+        "logo": "Images/olumo.jpg",
+        "phone": "+234 806 112 7044",
+        "address": "18 Quarry Road, Abeokuta",
+        "website": "https://example.com/olumo-creative"
+    },
+    {
+        "name": "Greenway Farms Cooperative",
+        "level": "Bronze",
+        "logo": "Images/farm.jpg",
+        "phone": "+234 809 770 3681",
+        "address": "42 Kemta Road, Abeokuta",
+        "website": "https://example.com/greenway-farms"
     }
 ]
