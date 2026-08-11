@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soupy Chef - Order</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/soupy.css">
+  <script src="./scripts/soupy.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="./images/soupy_chef_logo.png" alt="Soupy Chef Logo" loading="lazy">
+    <nav>
+      <a href="soupy.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="order.html" class="active">Order</a>
+      <a href="references.html">References</a>
+    </nav>
+    <a href="signup.html" class="auth-btn signup-btn">Sign Up</a>
+    <a href="login.html" class="auth-btn login-btn">Log In</a>
+  </header>
+
+  <main class="page-content">
+    <section class="order-intro">
+      <h1>Place Your Order</h1>
+      <p>Enjoy authentic Nigerian soups made fresh and delivered to your doorstep. Below is your cart and the order form.</p>
+    </section>
+
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> ₦<span id="cart-total">0</span></p>
+      <button id="clear-cart">Clear Cart</button>
+    </section>
+
+    <section class="order-form">
+      <h2>Order Details</h2>
+      <form id="order-form">
+        <label for="order-name">Full Name</label>
+        <input id="order-name" type="text" required>
+
+        <label for="order-email">Email</label>
+        <input id="order-email" type="email" required>
+
+        <label for="order-address">Delivery Address</label>
+        <textarea id="order-address" rows="3" required></textarea>
+
+        <label for="order-swallow">Choose Your Swallow</label>
+        <select id="order-swallow" required>
+          <option value="">--Choose--</option>
+          <option value="pounded-yam">Pounded Yam</option>
+          <option value="fufu">Fufu</option>
+          <option value="eba">Eba</option>
+          <option value="rice">Rice</option>
+        </select>
+
+        <button type="submit">Confirm Order</button>
+      </form>
+    </section>
+
+    <section class="previous-orders">
+      <h2>Your Previous Orders</h2>
+      <div id="saved-orders"></div>
+    </section>
+
+    <!-- Reviews kept as you had them -->
+    <section class="reviews">
+      <h2>What Our Customers Say</h2>
+      <div id="review-list" class="review-grid">
+        <!-- reviews will be injected here -->
+      </div>
+
+    <div class="review-form">
+  <h3>Leave a Review</h3>
+  <form id="review-form">
+    <label for="review-name">Name:</label>
+    <input type="text" id="review-name" placeholder="Your name" required>
+
+    <label for="review-rating">Rating:</label>
+    <div id="rating-group">
+      <label><input type="radio" name="review-rating" value="1" required> ⭐</label>
+      <label><input type="radio" name="review-rating" value="2"> ⭐⭐</label>
+      <label><input type="radio" name="review-rating" value="3"> ⭐⭐⭐</label>
+      <label><input type="radio" name="review-rating" value="4"> ⭐⭐⭐⭐</label>
+      <label><input type="radio" name="review-rating" value="5"> ⭐⭐⭐⭐⭐</label>
+    </div>
+
+    <label for="review-text">Your Review:</label>
+    <textarea id="review-text" rows="3" placeholder="Share your experience..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+</div>
+>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <p>Email: <a href="mailto:info@soupychef.ng">info@soupychef.ng</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Our Journey</h3>
+        <a href="https://instagram.com/soupychefng" target="_blank">Instagram</a><br>
+        <a href="https://facebook.com/soupychefng" target="_blank">Facebook</a>
+      </div>
+      <div class="footer-section">
+        <h3>Our Mission</h3>
+        <p>To preserve Nigeria's culinary heritage by delivering authentic soups that nourish body and soul.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soupy Chef. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

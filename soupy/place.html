@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Emmanuel Nasir</title>
+    <meta name="author" content="Emmanuel Nasir">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals |Emmanuel Nasir| Week 3 assignment">
+    <link href="styles/place.css" rel="stylesheet">
+    <link href="styles/placelarge.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1> Nigeria</h1>
+        </header>
+        <picture class="images">
+            <source srcset="./images/naijaculturelarge.webp" media="(min-width:1000px)">
+            <source srcset="./images/naijaculturemedium.webp" media="(min-width:500px)">
+            <img src="./images/naijaculturesmall.webp" alt="Nigerian Culture" loading="lazy">
+
+        </picture>
+<div class="overlay"></div>
+<main>
+    <section class="Data">
+        <h2>Data</h2>
+          
+                <p><b>Area:</b> 923,768 km²</p>
+                <p><b>Population:</b> 200+ million </p>
+                <p><b>Capital:</b> Abuja</p>
+                <p><b>Languages:</b> English, Yoruba, Igbo, Hausa</p>
+                <p><b>Currency:</b> Naira (NGN)</p>
+                <p><b>Time Zone:</b> West Africa Time (WAT)</p>
+                <p><b>Climate:</b> Tropical</p>
+                <p><b>Major Cities:</b> Lagos, Kano, Ibadan, Port Harcourt</p>
+                <p><b>Independence:</b> October 1, 1960</p>
+                <p><b>National Holidays:</b> Independence Day, Democracy Day</p>
+                <p><b>Economy:</b> Oil, Agriculture, Telecommunications</p>
+    </section>
+<div class="weather">
+    <section class="weather-icon-container">
+    <h2>Weather
+    <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon" loading="lazy">
+    </h2>
+    </section>
+    <div class="weather-info">
+  <p><b>Temperature:</b> <span id="temperature">3°C</span></p>
+  <p><b>Condition:</b> <span id="condition">Sunny</span></p>
+  <p><b>Humidity:</b> <span id="humidity">60%</span></p>
+  <p><b>Wind Speed:</b> <span id="windSpeed">15 km/h</span></p>
+  <p><b>Wind Chill:</b> <span id="windChill">Loading...</span></p>
+</div>
+</div>
+</main>
+
+<footer>
+    <p>  <span id="currentYear"> </span> 🌺Emmanuel Nasir🌺Nigeria</p>
+    <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

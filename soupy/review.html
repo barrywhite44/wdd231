@@ -1,0 +1,46 @@
+<!DOCTYPE html>     
+<html lang="en-US">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Emmanuel Nasir</title>
+    <meta name="author" content="Emmanuel Nasir">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Emmanuel Nasir.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500;600;700&display=swap">    <link href="styles/form.css" rel="stylesheet">
+    <link href="styles/form-large.css" rel="stylesheet">
+
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+    
+    <main>
+        <div class="confirmation">
+            <h2>Thank You!</h2>
+            <p>Your product review has been successfully submitted.</p>
+            <p>Total reviews completed: <span id="reviewCount">0</span></p>
+            <a href="form.html">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p><span id="currentYear"></span> 🌺 Emmanuel Nasir 🌺 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Set last modified date
+        document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+    </script>
+</body>
+</html>

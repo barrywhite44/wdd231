@@ -1,0 +1,95 @@
+<!DOCTYPE html>     
+<html lang="en-US">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Emmanuel Nasir</title>
+    <meta name="author" content="Emmanuel Nasir">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Emmanuel Nasir.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500;600;700&display=swap">
+    <link href="styles/form.css" rel="stylesheet">
+    <link href="styles/form-large.css" rel="stylesheet">
+
+    <script src="scripts/form.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+    <main>
+        <form method="get" action="review.html">
+            <!-- PRODUCT NAME -->
+            <fieldset>
+                <label for="product">Product Name <span class="required">*</span></label>
+                <select name="product" id="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>    
+            </fieldset>
+            
+            <!-- OVERALL RATING -->
+            <fieldset>
+                <legend>Overall Rating <span class="required">*</span></legend>
+                <div class="rating-group">
+                    <label><input type="radio" name="rating" value="1" required> &star;</label>
+                    <label><input type="radio" name="rating" value="2" required> &star;&star;</label>
+                    <label><input type="radio" name="rating" value="3" required> &star;&star;&star;</label>
+                    <label><input type="radio" name="rating" value="4" required> &star;&star;&star;&star;</label>
+                    <label><input type="radio" name="rating" value="5" required> &star;&star;&star;&star;&star;</label>
+                </div>
+            </fieldset> 
+
+            <!-- DATE OF INSTALLATION -->
+            <fieldset>
+                <label for="installationDate">Date of Installation <span class="required">*</span></label>
+                <input type="date" name="installationDate" id="installationDate" required>
+            </fieldset>
+
+            <!-- USEFUL FEATURES -->
+            <fieldset>
+                <legend>Which features did you find useful in the product? <em>(check all that apply)</em></legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="durability">Durability</label>
+                    <label><input type="checkbox" name="features" value="ease">Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance">Performance</label>
+                    <label><input type="checkbox" name="features" value="design">Design</label>
+                </div>
+            </fieldset>
+
+            <!-- WRITTEN REVIEW -->
+            <fieldset>
+                <label for="review">Written Review <em>(Optional)</em></label>
+                <textarea name="review" id="review" placeholder="Write your review here..."></textarea>
+            </fieldset>
+
+            <!-- USER'S NAME -->
+            <fieldset>
+                <label for="name">Your Name <em>(Optional)</em></label>
+                <input type="text" name="name" id="name">
+            </fieldset>
+
+            <!-- SUBMIT BUTTON -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p><span id="currentYear"></span> 🌺 Emmanuel Nasir 🌺 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Set last modified date
+        document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+    </script>
+</body>
+</html>
