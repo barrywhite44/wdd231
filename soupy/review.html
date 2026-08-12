@@ -1,46 +1,53 @@
-<!DOCTYPE html>     
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
- 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Emmanuel Nasir</title>
-    <meta name="author" content="Emmanuel Nasir">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Emmanuel Nasir.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soupy Chef - Review Submitted</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <meta name="author" content="Barrywhite Christopher">
+  <meta name="description" content="Thank you for reviewing Soupy Chef — authentic Nigerian soups made fresh and delivered to your door.">
+  <link rel="icon" href="./images/favicon.ico">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500;600;700&display=swap">    <link href="styles/form.css" rel="stylesheet">
-    <link href="styles/form-large.css" rel="stylesheet">
+  <meta property="og:title" content="Soupy Chef - Authentic Nigerian Soups">
+  <meta property="og:description" content="Order authentic Nigerian soups made fresh and delivered to your doorstep. Egusi, Ogbono, Pepper Soup, and more.">
+  <meta property="og:image" content="https://barrywhite44.github.io/wdd231/soupy/images/hero-soup.jpg">
+  <meta property="og:url" content="https://barrywhite44.github.io/wdd231/soupy/review.html">
 
-    <script src="scripts/form.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/soupy.css">
+  <script src="./scripts/soupy.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Review Submitted</h1>
-    </header>
-    
-    <main>
-        <div class="confirmation">
-            <h2>Thank You!</h2>
-            <p>Your product review has been successfully submitted.</p>
-            <p>Total reviews completed: <span id="reviewCount">0</span></p>
-            <a href="form.html">Submit Another Review</a>
-        </div>
-    </main>
+  <header>
+    <img src="./images/soupy_chef_logo.png" alt="Soupy Chef Logo" loading="lazy">
+    <nav>
+      <a href="soupy.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="order.html">Order</a>
+      <a href="references.html">References</a>
+    </nav>
+    <a href="signup.html" class="auth-btn signup-btn">Sign Up</a>
+    <a href="login.html" class="auth-btn login-btn">Log In</a>
+  </header>
 
-    <footer>
-        <p><span id="currentYear"></span> 🌺 Emmanuel Nasir 🌺 Nigeria</p>
-        <p id="lastModified"></p>
-    </footer>
+  <main class="form-page">
+    <h1>Thank You!</h1>
+    <div class="confirmation">
+      <p>Your review has been submitted and now appears on our Order page for other customers to see.</p>
+      <p>Total reviews so far: <strong id="reviewCount">0</strong></p>
+    </div>
+    <p><a href="order.html">Leave Another Review</a></p>
+    <p><a href="menu.html">Back to the Menu</a></p>
+  </main>
 
-    <script>
-        // Set current year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Set last modified date
-        document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
-    </script>
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soupy Chef. All Rights Reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
