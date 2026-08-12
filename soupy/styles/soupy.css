@@ -137,7 +137,7 @@ header button:hover {
 }
 
 #order {
-  background: linear-gradient(135deg, #c16e20, #e0812e);
+  background-color: #a8541c;
   color: #fff;
   border: none;
   padding: 14px 26px;
@@ -152,7 +152,7 @@ header button:hover {
 
 #order:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #e0812e, #f19a3f);
+  background-color: #c16e20;
 }
 
 /* ===== Why Choose Us ===== */
@@ -455,7 +455,7 @@ footer::before {
 }
 
 #order-btn {
-  background: linear-gradient(135deg, #c16e20, #e0812e);
+  background-color: #a8541c;
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -469,7 +469,7 @@ footer::before {
 }
 
 #order-btn:hover {
-  background: linear-gradient(135deg, #e0812e, #f19a3f);
+  background-color: #c16e20;
   transform: translateY(-3px);
 }
 
@@ -678,7 +678,7 @@ select:focus {
 .order-form button,
 .review-form button,
 .auth-form button {
-  background: linear-gradient(135deg, #c16e20, #e0812e);
+  background-color: #a8541c;
   color: #fff;
   border: none;
   padding: 14px;
@@ -694,7 +694,7 @@ select:focus {
 .order-form button:hover,
 .review-form button:hover,
 .auth-form button:hover {
-  background: linear-gradient(135deg, #e0812e, #f19a3f);
+  background-color: #c16e20;
   transform: translateY(-2px);
 }
 
@@ -777,7 +777,7 @@ select:focus {
 }
 /* ===== Auth Buttons (Header) ===== */
 .auth-btn {
-  background: linear-gradient(135deg, #3a5a40, #4e8c4a);
+  background-color: #3a5a40;
   color: #fff;
   padding: 10px 22px;
   border-radius: 25px;
@@ -790,17 +790,16 @@ select:focus {
 }
 
 .auth-btn:hover {
-  background: linear-gradient(135deg, #4e8c4a, #5ea353);
+  background-color: #4e8c4a;
   transform: translateY(-2px);
 }
 
 .signup-btn {
-  background-color: #c16e20; /* fallback for tools/browsers that can't read gradients */
-  background: linear-gradient(135deg, #c16e20, #e0812e);
+  background-color: #a8541c;
 }
 
 .signup-btn:hover {
-  background: linear-gradient(135deg, #e0812e, #f19a3f);
+  background-color: #c16e20;
 }
 .user-badge {
   margin-left: 20px;
@@ -815,7 +814,7 @@ select:focus {
 }
 
 .user-badge button {
-  background: #c16e20;
+  background: #a8541c;
   border: none;
   color: white;
   padding: 5px 10px;
@@ -825,7 +824,7 @@ select:focus {
 }
 
 .user-badge button:hover {
-  background: #e0812e;
+  background: #c16e20;
 }
 
 #rating-group {
@@ -868,7 +867,7 @@ select:focus {
 
 /* ===== BUTTON ===== */
 .add-to-cart {
-  background-color: #d97706;
+  background-color: #b45309;
   color: #fff;
   border: none;
   padding: 0.7rem 1.2rem;
@@ -880,7 +879,7 @@ select:focus {
 }
 
 .add-to-cart:hover {
-  background-color: #b45309;
+  background-color: #8f4207;
 }
 
 /* ===== RESPONSIVE ===== */
