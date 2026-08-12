@@ -285,8 +285,15 @@ if (reviewForm && reviewListDiv) {
     rs.push({ name, text, rating, date: new Date().toLocaleString() });
     localStorage.setItem(KEY_REVIEWS, JSON.stringify(rs));
     reviewForm.reset();
-    renderReviews();
+    window.location.href = "review.html";
   });
+}
+
+// --- REVIEW CONFIRMATION (review.html) ---
+const reviewCountSpan = $("#reviewCount");
+if (reviewCountSpan) {
+  const rs = JSON.parse(localStorage.getItem(KEY_REVIEWS)) || [];
+  reviewCountSpan.textContent = rs.length;
 }
 
 
