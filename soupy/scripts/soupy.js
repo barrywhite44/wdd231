@@ -1,8 +1,8 @@
 // scripts/soupy.js - Shared site behavior (auth, cart, orders, reviews)
 document.addEventListener("DOMContentLoaded", () => {
   // --- Utility helpers ---
-  const $ = (sel) => document.querySelector(sel);
-  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+  const qs = (sel) => document.querySelector(sel);
+  const qsa = (sel) => Array.from(document.querySelectorAll(sel));
 
   // storage keys
   const KEY_USERS = "soupyUsers";
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- HEADER user status (append badge + hide auth links when logged in) ---
   function updateHeader() {
-    const header = $("header");
+    const header = qs("header");
     if (!header) return;
 
     // remove existing badge if present
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       badge.innerHTML = `👋 Welcome, <strong>${escapeHtml(currentUser.name)}</strong> <button id="logoutBtn">Logout</button>`;
       header.appendChild(badge);
 
-      const logoutBtn = $("#logoutBtn");
+      const logoutBtn = qs("#logoutBtn");
       logoutBtn?.addEventListener("click", () => {
         localStorage.removeItem(KEY_CURRENT);
         currentUser = null;
@@ -62,13 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
   updateHeader();
 
   // --- SIGNUP (signup.html) ---
-  const signupForm = $("#signup-form");
+  const signupForm = qs("#signup-form");
   if (signupForm) {
     signupForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const name = $("#signup-name").value.trim();
-      const email = $("#signup-email").value.trim().toLowerCase();
-      const password = $("#signup-password").value;
+      const name = qs("#signup-name").value.trim();
+      const email = qs("#signup-email").value.trim().toLowerCase();
+      const password = qs("#signup-password").value;
 
       if (!name || !email || !password) {
         alert("Please complete all fields.");
@@ -93,12 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- LOGIN (login.html) ---
-  const loginForm = $("#login-form");
+  const loginForm = qs("#login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = $("#login-email").value.trim().toLowerCase();
-      const password = $("#login-password").value;
+      const email = qs("#login-email").value.trim().toLowerCase();
+      const password = qs("#login-password").value;
 
       const found = users.find(u => u.email === email && u.password === password);
       if (!found) {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- MENU: add-to-cart (menu.html) ---
-  const addBtns = $$(".add-to-cart");
+  const addBtns = qsa(".add-to-cart");
   if (addBtns.length > 0) {
     addBtns.forEach(btn => {
       btn.addEventListener("click", () => {
@@ -132,11 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- ORDER page: render cart, allow clear, and submit order ---
-  const cartList = $("#cart-items");
-  const cartTotalSpan = $("#cart-total");
-  const clearCartBtn = $("#clear-cart");
-  const orderForm = $("#order-form");
-  const savedOrdersDiv = $("#saved-orders");
+  const cartList = qs("#cart-items");
+  const cartTotalSpan = qs("#cart-total");
+  const clearCartBtn = qs("#clear-cart");
+  const orderForm = qs("#order-form");
+  const savedOrdersDiv = qs("#saved-orders");
 
   function renderCart() {
     if (!cartList) return;
@@ -180,10 +180,10 @@ document.addEventListener("DOMContentLoaded", () => {
     orderForm.addEventListener("submit", (e) => {
       e.preventDefault();
       // read order info
-      const name = $("#order-name").value.trim();
-      const email = $("#order-email").value.trim();
-      const address = $("#order-address").value.trim();
-      const swallow = $("#order-swallow").value;
+      const name = qs("#order-name").value.trim();
+      const email = qs("#order-email").value.trim();
+      const address = qs("#order-address").value.trim();
+      const swallow = qs("#order-swallow").value;
 
       if (!name || !email || !address || !swallow) {
         alert("Please fill in all order details.");
@@ -241,8 +241,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSavedOrders();
 
 // --- REVIEWS: submit & render (order.html has review-form & review-list) ---
-const reviewForm = $("#review-form");
-const reviewListDiv = $("#review-list");
+const reviewForm = qs("#review-form");
+const reviewListDiv = qs("#review-list");
 if (reviewForm && reviewListDiv) {
   // load and render existing
   function renderReviews() {
@@ -271,8 +271,8 @@ if (reviewForm && reviewListDiv) {
 
   reviewForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = $("#review-name").value.trim();
-    const text = $("#review-text").value.trim();
+    const name = qs("#review-name").value.trim();
+    const text = qs("#review-text").value.trim();
     const ratingInput = document.querySelector("input[name='review-rating']:checked");
     const rating = ratingInput ? parseInt(ratingInput.value) : 5;
 
@@ -290,7 +290,7 @@ if (reviewForm && reviewListDiv) {
 }
 
 // --- REVIEW CONFIRMATION (review.html) ---
-const reviewCountSpan = $("#reviewCount");
+const reviewCountSpan = qs("#reviewCount");
 if (reviewCountSpan) {
   const rs = JSON.parse(localStorage.getItem(KEY_REVIEWS)) || [];
   reviewCountSpan.textContent = rs.length;
@@ -298,7 +298,7 @@ if (reviewCountSpan) {
 
 
   // --- Home: order CTA button goes to order.html ---
-  const orderCta = $("#order-cta");
+  const orderCta = qs("#order-cta");
   if (orderCta) {
     orderCta.addEventListener("click", () => {
       window.location.href = "order.html";
