@@ -3,37 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="discovering with Abeokuta Chamber of Commerce.">
-    <meta name="author" content="Emmanuel Nasir">
-    <meta property="og:title" content="discovery - Abeokuta Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="Image/logo.png">
-    <meta property="og:url" content="https://neyoungandy.github.io/wdd231/chamber/discover.html">
-    <title>Discovery - Abeokuta Chamber of Commerce</title>
+
+    <meta
+        name="description"
+        content="Discover Abeokuta business opportunities, local attractions, community events, and resources through the Abeokuta Chamber of Commerce discover page.">
+    <meta name="author" content="Barrywhite Christopher">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Discover Abeokuta Chamber of Commerce Guide</title>
+
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="Images/favicon.ico">
+
+    <meta property="og:title" content="Discover Abeokuta Chamber of Commerce Guide">
+    <meta
+        property="og:description"
+        content="Explore business opportunities, local attractions, events, and community resources available through the Abeokuta Chamber of Commerce.">
+    <meta
+        property="og:image"
+        content="https://barrywhite44.github.io/wdd231/chamber/Images/logo.png">
+    <meta
+        property="og:url"
+        content="https://barrywhite44.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
     <script src="scripts/discovery.js" defer></script>
-    <script src="scripts/lazyload.js" defer></script>
 </head>
+
+
+
 <body>
 
         <header>
-            <div class="header-container">
-                <h1>Discover Chamber</h1>
-            </div>
+             <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+         
+           
         </header>
     
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    
         <main>
+               <h1>Discover Abeokuta</h1>
+               <section class="discover-content">
+            <div class="container">
+            <aside class="sidebar">
             <div class="sidebar-content">
                 <h3>Demographics</h3>
                 <ul>
@@ -53,7 +76,6 @@
                     <li>Local Market Day - May 10, 2025</li>
                 </ul>
             </div>
-
             <!-- Attractions Section -->
             <div class="sidebar-content">
                 <h3>Local Attractions</h3>
@@ -71,22 +93,24 @@
                     <h2>Local Photos of Interest</h2>
                     <div class="image-gallery">
                         <!-- Six optimized images with lazy loading -->
-                        <img src="Images/ogunosun.jpg" alt="Ogun Osun river basin" class="lazy-load" />
-                        <img src="Images/olumo.jpg" alt="Olumo" class="lazy-load" />
-                        <img src="Images/rail.jpg" alt="rail line" class="lazy-load" />
-                        <img src="Images/forest.jpg" alt="forest" class="lazy-load" />
-                        <img src="Images/farm.jpg" alt="farm produce" class="lazy-load" />
-                        <img src="Images/bridge.jpg" alt="lafenwa bridge" class="lazy-load" />
+                        <img src="Images/ogunosun.jpg" alt="Ogun Osun River Basin" loading="lazy">
+                        <img src="Images/olumo.jpg" alt="Olumo Rock" loading="lazy">
+                        <img src="Images/rail.jpg" alt="Rail line" loading="lazy">
+                        <img src="Images/forest.jpg" alt="Forest" loading="lazy">
+                        <img src="Images/farm.jpg" alt="Farm produce" loading="lazy">
+                        <img src="Images/bridge.jpg" alt="Lafenwa Bridge" loading="lazy">
                     </div>
                 </section>
-    
+            </div>
+            </aside>
+    </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; <span id="current-year"></span> Abeokuta Chamber of Commerce</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Emmanuel Nasir WDD231</p>
+        <p>Barrywhite Christopher  WDD231</p>
         
     </footer>
     <script>

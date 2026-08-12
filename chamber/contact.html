@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View upcoming events and networking opportunities with the Abeokuta Chamber of Commerce.">
-    <meta name="author" content="Emmanuel Nasir">
+    <meta name="description" content="Contact the Abeokuta Chamber of Commerce.">
+    <meta name="author" content="Barrywhite Christopher ">
     <meta property="og:title" content="Contact - Abeokuta Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Image/logo.png">
-    <meta property="og:url" content="contact.html">
-    <title>Events - Abeokuta Chamber of Commerce</title>
+    <meta property="og:image" content="Images/logo.png">
+    <meta property="og:url" content="https://neyoungandy.github.io/wdd231/chamber/contact.html">
     <title>Contact Us - Abeokuta Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
@@ -27,18 +26,18 @@
         </nav>
     </header>
     <main>
-        <form id="contact-form">
+        <form id="contact-form" action="#" method="post">
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" autocomplete="name" required>
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
             <div>
                 <label for="message">Message:</label>
-                <textarea id="message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
             </div>
             <button type="submit">Submit</button>
         </form>
@@ -46,7 +45,11 @@
     <footer>
         <p>&copy; <span id="current-year"></span> Abeokuta Chamber of Commerce</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Nasir, WDD231</p>
+        <p>Developed by Barrywhite Christopher, WDD231</p>
     </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 </html>

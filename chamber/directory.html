@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View upcoming events and networking opportunities with the Abeokuta Chamber of Commerce.">
-    <meta name="author" content="Emmanuel Nasir">
+    <meta name="description" content="Browse businesses and organizations that belong to the Abeokuta Chamber of Commerce.">
+    <meta name="author" content="Barrywhite Christopher ">
     <meta property="og:title" content="Directory - Abeokuta Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Image/logo.png">
-    <meta property="og:url" content="directory.html">
-    <title>Events - Abeokuta Chamber of Commerce</title>
+    <meta property="og:description" content="Browse local businesses and organizations in the Abeokuta Chamber of Commerce member directory.">
+    <meta property="og:image" content="https://barrywhite44.github.io/wdd231/chamber/Images/logo.png">
+    <meta property="og:url" content="https://barrywhite44.github.io/wdd231/chamber/directory.html">
     <title>Directory - Abeokuta Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="Images/favicon.ico">
+    <script src="scripts/directory.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Abeokuta Chamber of Commerce Directory</h1>
-        <nav>
+        <p class="site-name">Abeokuta Chamber of Commerce</p>
+        <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+        <nav id="primary-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -28,10 +34,10 @@
         </nav>
     </header>
     <main>
-        <h2>Our Members</h2>
-        <div class="view-toggle">
-            <button id="grid-view-btn">Grid View</button>
-            <button id="list-view-btn">List View</button>
+        <h1>Chamber Member Directory</h1>
+        <div class="view-toggle" aria-label="Directory display options">
+            <button id="grid-view-btn" type="button" aria-pressed="true">Grid View</button>
+            <button id="list-view-btn" type="button" aria-pressed="false">List View</button>
         </div>
         <section id="member-list" class="grid"></section>
     </main>
@@ -40,10 +46,8 @@
     <footer>
         <p>&copy; <span id="current-year"></span> Abeokuta Chamber of Commerce</p>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>Developed by Emmanuel Nasir, WDD231</p>
+        <p>Developed by Barrywhite Christopher , WDD231</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="scripts/directory.js"></script>
 </body>
 </html>
